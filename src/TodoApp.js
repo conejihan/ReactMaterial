@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {TodoList} from "./TodoList";
 import DatePicker from 'react-datepicker';
@@ -16,6 +15,7 @@ export class TodoApp extends Component{
       this.handlePriorityChange = this.handlePriorityChange.bind(this);
       this.handleDateChange = this.handleDateChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
+
 
   }
 

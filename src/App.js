@@ -1,19 +1,13 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {TodoList} from "./TodoList";
-import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import moment from "moment";
 import {Login} from "./components/Login";
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 import {TodoApp} from "./TodoApp";
 
 class App extends Component {
 
-    constructor(props) {
-        super(props);
-    }
 
 
     render() {

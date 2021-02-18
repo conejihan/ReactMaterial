@@ -12,9 +12,23 @@ import './Login.css'
 
 
 export class Login extends React.Component{
-
+  state = {
+    user: 'Nicolas',
+    password: '1234prueba'
+  };
+  guarda = () => {
+  const { user, password} = this.state;
+  localStorage.setItem('password', password);
+  localStorage.setItem('user', user);
+  };
+  lee() {
+    const password = localStorage.getItem('password');
+    const user = localStorage.getItem('user');
+    this.setState({ user, password });
+  };
     render(){
         return (
+
             <React.Fragment>
                 <CssBaseline />
                 <main className="layout">
@@ -27,6 +41,7 @@ export class Login extends React.Component{
                             <FormControl margin="normal" required fullWidth>
                                 <InputLabel htmlFor="email">Email Address</InputLabel>
                                 <Input id="email" name="email" autoComplete="email" autoFocus />
+
                             </FormControl>
                             <FormControl margin="normal" required fullWidth>
                                 <InputLabel htmlFor="password">Password</InputLabel>
