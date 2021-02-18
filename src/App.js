@@ -5,6 +5,8 @@ import {TodoList} from "./TodoList";
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import moment from "moment";
+import {Login} from "./components/Login";
+import {BrowserRouter, Switch, Route} from "react-router-dom";
 
 class App extends Component {
 
@@ -21,12 +23,21 @@ class App extends Component {
     render() {
 
         return (
+
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo"/>
                     <h1 className="App-title">TODO React App</h1>
                 </header>
-
+                <br/>
+                <br/>
+                <form onSubmit={this.handleSubmit} className="todo-form">
+                <BrowserRouter>
+                  <Switch>
+                    <Route exact path="/" component = {Login} />
+                  </Switch>
+                </BrowserRouter>
+                </form>
                 <br/>
                 <br/>
                 <form onSubmit={this.handleSubmit} className="todo-form">
